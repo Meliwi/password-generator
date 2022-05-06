@@ -20,7 +20,7 @@ from django.urls import path
 from generator import views
 urlpatterns = [
     #Spath('admin/', admin.site.urls),
-    path('home', views.home),
-    path('about', views.about),
-    path('password', views.password)
+    path('', views.home),
+    path('abour', views.about),
+    path('password', views.password, name='password')
 ]

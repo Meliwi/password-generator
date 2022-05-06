@@ -1,4 +1,6 @@
-<form action="password">
+{% extends 'views/layout.html'%}
+{% block content %}
+<form action="{% url 'password' %}">
     <h1>Password Generator</h1>
     <label for="length"> Select lenght of your password</label>
     <select name="length" id="length">
@@ -13,6 +15,11 @@
         <option value="13">14 characters</option>
     </select>
     <label for="uppercase">uppercase</label>
-    <input type="checkbox">
+    <input type="checkbox" name="uppercase" id="uppercase">
+    <label for="special">Special characters</label>
+    <input type="checkbox" name="special" id="special">
+    <label for="numbers">Numbers</label>
+    <input type="checkbox" name="numbers" id="numbers">  
     <button>Generate password</button>
 </form>
+{% endblock%}
